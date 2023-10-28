@@ -3,25 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* variable padding */
+  --p: 30px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  @apply h-full;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply h-full overflow-x-hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+@layer base {
+  .l-container {
+    background-color: #0c0f14;
+    width: 100%;
+    height: 100%;
+    padding: var(--p);
+    overflow-x: hidden;
+  }
+
+  .scrollbar {
+    overflow: auto;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar::-webkit-scrollbar {
+    overflow: auto;
+    display: none; /* Safari and Chrome */
+  }
+}
+
+@layer utilities {
+  .w-overflow {
+    width: calc(100% + var(--p) * 2);
+  }
 }
