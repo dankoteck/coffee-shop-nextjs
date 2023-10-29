@@ -20,7 +20,7 @@ export default function Page() {
   );
 
   return (
-    <section className="l-container">
+    <section className="l-container p-[30px]">
       <header className="space-y-7 mb-6">
         <h1 className="text-white font-semibold text-[28px] leading-9">
           Find the best <br className="block xs:hidden" />

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* variable padding */
-  --p: 30px;
-}
-
 html {
   @apply h-full;
 }
@@ -21,7 +16,6 @@ body {
     background-color: #0c0f14;
     width: 100%;
     height: 100%;
-    padding: var(--p);
     overflow-x: hidden;
   }
 
@@ -38,6 +32,6 @@ body {
 
 @layer utilities {
   .w-overflow {
-    width: calc(100% + var(--p) * 2);
+    width: calc(100% + 60px);
   }
 }

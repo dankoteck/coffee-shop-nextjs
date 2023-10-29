@@ -8,6 +8,7 @@ export type Product = {
   rating: number;
   description: string;
   origin: string;
+  roasted: string;
   type: string;
   sizes: string[];
   images?: string[];
@@ -23,10 +24,11 @@ const Products: Product[] = [
     star: 4.5,
     rating: 123,
     description: "A single shot of rich and bold espresso.",
-    origin: "Italian Roast",
+    origin: "Italian",
     type: "Hot",
     sizes: ["Single", "Double"],
-    images: ["/images/espresso-shot-1.jpg"],
+    images: ["/images/espresso-shot-1.png"],
+    roasted: "Medium",
   },
   {
     id: 2,
@@ -37,9 +39,10 @@ const Products: Product[] = [
     star: 4.7,
     rating: 98,
     description: "Creamy latte with a hint of caramel flavor.",
-    origin: "Brazilian Roast",
+    origin: "Brazilian",
     type: "Hot",
     sizes: ["Regular", "Large"],
+    roasted: "Medium",
   },
   {
     id: 3,
@@ -50,9 +53,10 @@ const Products: Product[] = [
     star: 4.2,
     rating: 64,
     description: "Chilled coffee with ice cubes.",
-    origin: "Colombian Roast",
+    origin: "Colombian",
     type: "Iced",
     sizes: ["Regular", "Large"],
+    roasted: "Medium",
   },
   {
     id: 4,
@@ -67,6 +71,7 @@ const Products: Product[] = [
     origin: "Ethiopian Yirgacheffe",
     type: "Hot",
     sizes: ["Small", "Medium"],
+    roasted: "Medium",
   },
   {
     id: 5,
@@ -78,9 +83,10 @@ const Products: Product[] = [
     rating: 105,
     description:
       "A delightful blend of chocolate, coffee, and ice, topped with whipped cream.",
-    origin: "Sumatran Roast",
+    origin: "Sumatran",
     type: "Iced",
     sizes: ["Tall", "Grande"],
+    roasted: "Medium",
   },
   {
     id: 6,
@@ -95,6 +101,7 @@ const Products: Product[] = [
     origin: "Japanese Sencha",
     type: "Hot",
     sizes: ["Small", "Medium"],
+    roasted: "Medium",
   },
   {
     id: 7,
@@ -109,6 +116,7 @@ const Products: Product[] = [
     origin: "Italian Blend",
     type: "Hot",
     sizes: ["Single Shot", "Double Shot"],
+    roasted: "Medium",
   },
   {
     id: 8,
@@ -120,9 +128,10 @@ const Products: Product[] = [
     rating: 81,
     description:
       "A creamy latte with a hint of vanilla sweetness, topped with foam.",
-    origin: "Colombian Roast",
+    origin: "Colombian",
     type: "Hot",
     sizes: ["Regular", "Large"],
+    roasted: "Medium",
   },
   {
     id: 9,
@@ -137,6 +146,7 @@ const Products: Product[] = [
     origin: "Kenyan AA",
     type: "Hot",
     sizes: ["Small", "Medium"],
+    roasted: "Medium",
   },
   {
     id: 10,
@@ -151,6 +161,7 @@ const Products: Product[] = [
     origin: "Brazilian Blend",
     type: "Hot",
     sizes: ["Regular", "Large"],
+    roasted: "Medium",
   },
   {
     id: 11,
@@ -164,6 +175,7 @@ const Products: Product[] = [
     origin: "Indian Masala Chai",
     type: "Hot",
     sizes: ["Small", "Medium"],
+    roasted: "Medium",
   },
   {
     id: 12,
@@ -175,9 +187,10 @@ const Products: Product[] = [
     rating: 99,
     description:
       "A sweet and creamy caramel frappuccino topped with caramel drizzle.",
-    origin: "Colombian Roast",
+    origin: "Colombian",
     type: "Iced",
     sizes: ["Tall", "Grande"],
+    roasted: "Medium",
   },
   {
     id: 13,
@@ -192,6 +205,7 @@ const Products: Product[] = [
     origin: "Decaf Blend",
     type: "Hot",
     sizes: ["Single Shot", "Double Shot"],
+    roasted: "Medium",
   },
   {
     id: 14,
@@ -202,9 +216,10 @@ const Products: Product[] = [
     star: 4.6,
     rating: 78,
     description: "A nutty and indulgent hazelnut latte with a velvety finish.",
-    origin: "Guatemalan Roast",
+    origin: "Guatemalan",
     type: "Hot",
     sizes: ["Regular", "Large"],
+    roasted: "Medium",
   },
   {
     id: 15,
@@ -218,12 +233,13 @@ const Products: Product[] = [
     origin: "Japan",
     type: "Loose Leaf",
     sizes: ["50g", "100g", "250g"],
+    roasted: "Medium",
   },
   {
     id: 16,
     slug: "product-9",
     category: "Coffee",
-    title: "Espresso Roast",
+    title: "Espresso",
     price: 10.99,
     star: 4.2,
     rating: 12,
@@ -231,6 +247,7 @@ const Products: Product[] = [
     origin: "Italy",
     type: "Ground Coffee",
     sizes: ["250g", "500g"],
+    roasted: "Medium",
   },
   {
     id: 17,
@@ -244,6 +261,7 @@ const Products: Product[] = [
     origin: "Egypt",
     type: "Tea Bags",
     sizes: ["25 bags", "50 bags"],
+    roasted: "Medium",
   },
   {
     id: 18,
@@ -258,6 +276,7 @@ const Products: Product[] = [
     origin: "Ethiopia, Indonesia",
     type: "Whole Bean",
     sizes: ["250g", "500g"],
+    roasted: "Medium",
   },
   {
     id: 19,
@@ -271,12 +290,13 @@ const Products: Product[] = [
     origin: "Taiwan",
     type: "Loose Leaf",
     sizes: ["50g", "100g", "250g"],
+    roasted: "Medium",
   },
   {
     id: 20,
     slug: "product-13",
     category: "Coffee",
-    title: "French Roast",
+    title: "French",
     price: 10.49,
     star: 4.3,
     rating: 13,
@@ -284,6 +304,7 @@ const Products: Product[] = [
     origin: "France",
     type: "Ground Coffee",
     sizes: ["250g", "500g"],
+    roasted: "Medium",
   },
 ];
 

@@ -6,7 +6,7 @@ import NavigationBottom from "./components/NavigationBottom";
 import "./globals.css";
 
 const poppins = Poppins({
-  weight: ["600"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
