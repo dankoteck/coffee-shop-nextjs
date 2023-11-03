@@ -1,11 +1,15 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import Products from "~/static/json/products";
-import StarIcon from "~/assets/icons/star.svg";
 import FlameIcon from "~/assets/icons/flame.svg";
 import IcedIcon from "~/assets/icons/iced.svg";
 import LocationIcon from "~/assets/icons/location.svg";
+import StarIcon from "~/assets/icons/star.svg";
+import HeartIcon from "~/assets/icons/heart.svg";
+
+import Products from "~/static/json/products";
+
+import ButtonSelectSize from "./ButtonSelectSize";
 
 type Props = {
   params: {
@@ -86,9 +90,21 @@ export default function Page({ params }: Props) {
             </p>
           </div>
         </div>
+
+        <div className="w-[35px] h-[35px] bg-[#21262E] rounded-[10px] z-10 absolute top-6 right-6 bg-liked-button flex items-center justify-center">
+          <Image
+            src={HeartIcon}
+            alt={product.title}
+            style={{
+              filter:
+                "invert(22%) sepia(85%) saturate(1517%) hue-rotate(337deg) brightness(121%) contrast(98%)",
+            }}
+            className="object-cover"
+          />
+        </div>
       </div>
 
-      <div className="px-[30px] py-5 flex flex-col gap-5">
+      <div className="p-5 flex flex-col gap-5">
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold text-[#AEAEAE]">Description</p>
           {/* Using repeat cuz description is too short loll. */}
@@ -99,16 +115,21 @@ export default function Page({ params }: Props) {
 
         <div className="flex flex-col gap-2">
           <p className="text-sm font-semibold text-[#AEAEAE]">Size</p>
-          <div className="flex items-center gap-6">
-            {product.sizes.map((size) => (
-              <button
-                className="rounded-[10px] bg-[#141921] py-[10px] px-7 text-[#AEAEAE] text-[12px] leading-5 font-medium"
-                key={product.id + size}
-              >
-                {size}
-              </button>
-            ))}
+          <ButtonSelectSize sizes={product.sizes} />
+        </div>
+
+        <div className="flex items-center justify-between py-6">
+          <div className="flex flex-col gap-2">
+            <span className="text-[#AEAEAE] text-center text-[12px] leading-5">Price</span>
+            <div className="flex items-center gap-1 font-semibold text-xl leading-5">
+              <span className="text-[#D17842]">$</span>
+              <span className="text-white">{product.price}</span>
+            </div>
           </div>
+
+          <button className="w-[240px] h-[60px] rounded-[20px] bg-[#D17842] text-white">
+            Add to Cart
+          </button>
         </div>
       </div>
     </section>
